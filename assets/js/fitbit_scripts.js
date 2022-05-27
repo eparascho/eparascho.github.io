@@ -20,7 +20,7 @@ function responsivefy(svg){
 function heatmap(){
   // dimensions & margins
   const margin = {top: 30, right: 20, bottom: 30, left: 60}, 
-  width = 680 - margin.left - margin.right, 
+  width = 600 - margin.left - margin.right, 
   height = 500 - margin.top - margin.bottom;
   
   // svg object
@@ -56,7 +56,7 @@ function heatmap(){
     }
     // tooltip after move leave a cell
     const mousemove = function(event,d) {
-      tooltip.html("Daily stress: " + d.stress).style("left", (event.x)/2 + "px").style("top", (event.y)/2 + "px")
+      tooltip.html("Daily stress: " + d.stress).style("left", (event.x)/4 + "px").style("top", (event.y)/2 + "px")
     }
     // tooltip after leave
     const mouseleave = function(d) {
@@ -75,7 +75,7 @@ function heatmap(){
 function barchart(){
   // dimensions and margins
   const margin = {top: 20, right: 25, bottom: 30, left: 40},
-  width = 650 - margin.left - margin.right,
+  width = 600 - margin.left - margin.right,
   height = 490 - margin.top - margin.bottom;
 
   // svg object
@@ -104,7 +104,7 @@ function barchart(){
     }
     // tooltip after move
     var mousemove = function(event,d) {
-      tooltip.html("Mean Stress: " + d.meanstress).style("left", (event.x)/4 + "px").style("top", (event.y)/2 + "px")
+      tooltip.html("Mean Stress: " + d.meanstress).style("left", (event.x)/4 + "px").style("top", (event.y)/4 + "px")
     }
     // tooltip after leave
     var mouseleave = function(d) {

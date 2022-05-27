@@ -6,12 +6,11 @@
   <!-- Meta tags -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-    name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
   <!-- Title and favicon -->
-  <link rel="icon" type="image/png" href="">
-  <title>Title</title>
+  <link rel="icon" type="image/png" href="./assets/images/hinduist-yoga-position.png">
+  <title>UnStressMe</title>
 
   <!-- CSS files -->
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -42,6 +41,20 @@
 </head>
 
 <body onload="heatmap(),barchart(),bubbles();">
+  <!-- Header -->
+  <header id="header_all">
+    <div class="hero">
+      <div class="overlay">
+        <div class="row text-center">
+          <div class="col hero-text">
+            <h1>UnStressMe</h1>
+            <h2>Track, explain and visualize your stress to improve your mental well-being !</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <!-- Popover with info icon -->
   <button type="button" class="btn btn-info" id="first_info" data-container="body" data-toggle="popover" data-placement="right"
     data-content="The statistics below are computed after the analysis of a user's fitbit data from 250 days. Suppose that the data below is yours.">
@@ -49,20 +62,22 @@
   </button>
 
   <!-- Mean stress and common status -->
-  <div class="row" id="stress_icon">
-    <div class="col"><img src="./assets/images/overwhelmed.png" id="stress_img" alt="Stress icon"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <h3 class="text-center"><b>79.70</b></h3>
-      <p class="text-center">Mean Stress Score</p>
-    </div>
-    <div class="col-md-4">
-      <p class="text-center" id="explanation_value">Higher score <i class="fa fa-arrow-right"></i> Lower stress level </p>
-    </div>
-    <div class="col-md-4">
-      <h3 class="text-center"><b>Low</b></h3>
-      <p class="text-center">Usual Stress Level</p>
+  <div class="container" id="facts">
+    <div class="row">
+      <div class="col-md-6" id="stress_icon">
+        <img src="./assets/images/overwhelmed.png" id="stress_img" alt="Stress icon">
+      </div>
+      <div class="col-md-6" id="info_cards">
+        <div class="card card-body" id="meanstress">
+          <p id="header">Mean Stress Score</p>
+          <h3 id="header"><b>79.70</b></h3>
+        </div>
+        <p id="explanation_value">Higher score <i class="fa fa-arrow-right"></i> Lower stress level </p>
+        <div class="card card-body" id="statistics">
+          <p id="header">Usual Stress Level</p>
+          <h3 id="header"><b>Low</b></h3>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -75,23 +90,23 @@
   </button>
   <div class="row" id="heatmap_row">
     <div class="col-md-6">
-      <div class="row" id="heatmap"></div> 
-    </div>
-    <div class="col-md-6">
       <div class="row" id="questions_row">
         <p id="questions"><i> Which is your most high and low level stressed days?</i></p>
       </div>
       <div class="card" id="answers_row">
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p id="answers_text"><i class="fa fa-thumbs-up"></i> On the 7 of April appeared the most bright red cell with the lower value, so that was your most stressed day. <br>
-              <i class="fa fa-thumbs-down"></i> On the 15 of December appeared the most bright blue cell with the higher value, so that was your most calmed day.</p>
+            <p id="answers_text"><i class="fa fa-thumbs-down"></i> On the 7 of April appeared the most bright red cell with the lower value, so that was your most stressed day. <br>
+              <i class="fa fa-thumbs-up"></i> On the 15 of December appeared the most bright blue cell with the higher value, so that was your most calmed day.</p>
           </blockquote>
         </div>
       </div>
     </div>
+    <div class="col-md-6">
+      <div class="row" id="heatmap"></div> 
+    </div>
   </div>
-
+  
   <!-- Barchart -->
   <button type="button" class="btn btn-info" id="question_info" data-container="body" data-toggle="popover" data-placement="right"
     data-content="This plot shows each user's mean stress score in asceding order. The first users have higher stress level than the last 
@@ -129,11 +144,12 @@
           <div class="col"><img src="./assets/images/peace.png" id="calm_img" alt="Calmness icon"></div>
           <div class="row">
             <ol id="best_list">
-              <li>Not running</li>
-              <li>Possitive sleep affect</li>
-              <li>Previous day's low stress</li>
+              <li id="days">Not running</li>
+              <li id="days">Possitive sleep quality</li>
+              <li id="days">Previous day's low stress</li>
             </ol>   
           </div>
+          <p id="accuracy">This explanation is provided with 55% accuracy</p>
         </div>
       </div>
     </div>
@@ -144,11 +160,12 @@
           <div class="col"><img src="./assets/images/stress.png" id="anxiety_img" alt="Anxiety icon"></div>
           <div class="row">
             <ol id="worst_list">
-              <li>Negative sleep affect</li>
-              <li>High exertion</li>
-              <li>Not biking</li>
+              <li id="days">Negative sleep quality</li>
+              <li id="days">High exertion</li>
+              <li id="days">Not biking</li>
             </ol> 
           </div>
+          <p id="accuracy">This explanation is provided with 70% accuracy</p>
         </div>
       </div>
     </div>
@@ -156,7 +173,7 @@
 
   <!-- Circular progress bars and feature cards -->
   <div class="row" id="section_titles">
-    <p id="bold"><i>Your stress is affected by the following parameters: </i></p>
+    <p id="bold"><i>Your stress is affected by the following factors: </i></p>
   </div>
   <div class="row">
     <div class="container">
@@ -171,7 +188,7 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#activity" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="activity">
@@ -190,12 +207,12 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#sleep" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="sleep">
             <div class="card card-body">
-              <ol><li>Sleep affect <b>87.82%</b></li><li>Sleep score <b>7.73%</b></li><li>Sleep duration <b>4.42%</b></ol> 
+              <ol><li>Sleep quality <b>87.82%</b></li><li>Sleep score <b>7.73%</b></li><li>Sleep duration <b>4.42%</b></ol> 
             </div>
           </div>
         </div>
@@ -209,7 +226,7 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#stress" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="stress">
@@ -228,7 +245,7 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#health" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="health">
@@ -247,7 +264,7 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#date" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="date">
@@ -266,7 +283,7 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#demographics" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="demographics">
@@ -285,7 +302,7 @@
           </div>
           <p>
             <a class="btn btn-primary" id="feature_buttons" data-toggle="collapse" href="#disposal" role="button" aria-expanded="false" aria-controls="activity">
-              Show features
+              Show factors
             </a>
           </p>
           <div class="collapse" id="disposal">
@@ -299,18 +316,32 @@
   </div>
 
   <!-- Bubbles -->
-  <div class="row" id="section_titles">
-    <p id="bold"><i>Which of the above categories and features are the most important?</i></p>
-  </div>
   <div class="row" id="bubbles_row">
-    <div class="card" id="bubbles_exp">
-      <div class="card-body">
-          <p id="bubbles_text">Each color represents a category and each bubble represents a feature. The bigger the bubble the most important the feature 
-            for its category. You can compare not only the featyre of each category inbetween, but also features from different categories.</p>
+    <div class="col-md-6" >
+      <div class="row" id="questions_row">
+        <p id="questions"><i>Which of the above categories and factors are the most important?</i></p>
+      </div>
+      <div class="card" id="answers_row">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p id="answers_text">Each color represents a category and each bubble represents a factor. The bigger the bubble the most important the factor 
+            for its category. You can compare not only the factors of each category inbetween, but also factors from different categories.</p>
+          </blockquote>
+        </div>
       </div>
     </div>
+    <div class="col-md-6" id="bubbles">
+      <div class="row" ><div class="col-md-6"></div></div>    
+    </div>
   </div>
-  <div class="row" ><div class="col-md-6" id="bubbles"></div></div>
+
+  <footer class="footer" data-background-color="black">
+    <div class=" container ">
+      <div class="copyright" id="copyright">
+        &copy; Designed by Eva Paraschou
+      </div>
+    </div>
+  </footer>
 
 </body>
 
