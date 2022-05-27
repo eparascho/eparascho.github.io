@@ -1,0 +1,350 @@
+/************************** General **************************/
+p{
+    margin: auto;
+}
+
+/************************** Popovers **************************/
+.popover{
+    max-width: 80%;
+}
+/* info button */
+.btn#first_info{
+    margin-left:50px;
+    font-size: 1.20em;
+}
+.btn-info#first_info {
+    background-color: #0082aa !important;
+}
+/* question button */
+.btn#question_info{
+    margin-left: 50px;
+    margin-top: 45px;
+    font-size: 1.20em;
+}
+.btn-info#question_info {
+    background-color: #0082aa !important;
+}
+@media screen and (max-width: 603px) {
+    .popover{
+        max-width: 70%;
+    }
+    #stress_icon{
+        margin-top: 30px;
+    }
+    #heatmap_row{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 452px) {
+    #heatmap_row{
+        margin-top: 50px;
+    }
+    .btn-info#question_info {
+       margin-top: 70px;
+    }
+    #barchart_row{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 405px) {
+    .popover{
+        max-width: 65%;
+    }
+    #stress_icon{
+        margin-top: 40px;
+    }
+    #heatmap_row{
+        margin-top: 70px;
+    }
+    .btn-info#question_info {
+       margin-top: 100px;
+    }
+}
+@media screen and (max-width: 345px) {
+    .btn#question_info{
+        margin-left:30px;
+        font-size: 1em;
+    }
+    .btn#first_info{
+        margin-left:30px;
+        font-size: 1em;
+    }
+}
+
+/************************** Initial Information **************************/
+/* stress icon */
+#stress_img{
+    max-width: 10%;
+}
+#stress_icon{
+    padding-top: 20px;
+    text-align: center;
+}
+@media screen and (max-width: 400px) {
+    #stress_icon{
+        padding-top: 40px;
+    }    
+}
+/* descriptions */
+.text-center{
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 425px) {
+    h3.text-center{
+        font-size: 20px;
+    }
+    p.text-center {
+        font-size: 15px;
+    }
+}
+/* explanation */
+#explanation_value{
+    color: #0082aa;
+    font-weight: normal;
+    margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+    #explanation_value{
+        margin-top: 0px;
+    }
+}
+
+/************************** Questions **************************/
+#questions_row{
+    padding-top: 70;
+}
+#questions{
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0082aa ;
+}
+
+/************************** Answers **************************/
+.blockquote{
+    border: none;
+}
+#answers_row{
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 3px solid #0082aa;
+}
+#answers_text{
+    font-family: sans-serif;
+}
+@media screen and (max-width: 1110px) {
+    #questions{
+        padding-top: 30px;
+        font-size: 16px;
+    }
+    #answers_row{
+        margin-top: 20px;
+    }
+    #answers_text{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 870px) {
+    #questions{
+        padding-top: 20px;
+    }
+    #answers_row{
+        margin-top: 10px;
+    }
+    #answers_text{
+        font-size: 12px;
+    }
+}
+
+/************************** Heatmap & Barchart **************************/
+#heatmap_row, #barchart_row{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+/************************** Best & Worst **************************/
+#section_titles{
+    color: #0082aa;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 60px; 
+    padding-bottom: 30px;
+}
+#best_worst{
+    margin: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+/* best */
+#best_day{
+    border: 3px solid #038d31;
+    border-radius: 10px;
+}
+h5#best_header {
+    color: #038d31;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#calm_img{
+    max-width: 20%;
+    margin-left: 40%;
+    margin-bottom: 15px;
+}
+#best_list{
+    margin: auto;
+    padding-bottom: 20px;
+}
+/* worst */
+#worst_day{
+    border: 3px solid #b40303;
+    border-radius: 10px;
+}
+h5#worst_header {
+    color: #b40303;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#anxiety_img{
+    max-width: 20%;
+    margin-left: 40%;
+    margin-bottom: 15px;
+}
+#worst_list{
+    margin: auto;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 870px) {
+    #best_worst{
+        padding-left: 100px;
+        padding-right: 100px; 
+    }
+}
+@media screen and (max-width: 425px) {
+    #best_worst{
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+}
+
+/* Circles for categories and cards for features */
+p#bold{
+    font-weight: bold;
+}
+.col-7{
+    flex: 30%;
+}
+
+h5{
+    text-align: center;
+}
+#feature_buttons{
+    background-color: #0082aa;
+    margin-left: 80px;
+}
+#feature_buttons:hover{
+    background-color: #02a9db;
+}
+.collapse {
+    margin: auto;
+    max-width: 240px;
+}
+.card-body{
+    padding: 0px;
+}
+@media screen and (max-width: 761px) {
+    #section_titles{
+        font-size: 16px;
+        padding: 15px;  
+    }
+}
+@media screen and (max-width: 530px) {
+    #section_titles{
+        font-size: 14px;
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1300px;
+    }
+}
+@media (max-width: 1200px){
+    #feature_buttons {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 767px){
+    #feature_buttons {
+        margin-left: 15px;
+    }
+    #democircle {
+        margin-left: 35px;
+    }
+    h5#democircle {
+        margin-left: -110px;
+    }
+}
+@media (max-width: 433px){
+    h5#democircle {
+        margin-left: -30px;
+    }
+    #democircle {
+        margin-left: 50px;
+    }
+    #feature_buttons {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 375px){
+    h5#democircle {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 297px){
+    .container {
+        margin-left: 100px;
+    }
+    #democircle {
+        margin-left: 0px;
+    }
+    #feature_buttons {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1200px){
+    .card-body{
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px){
+    .card-body{
+        font-size: 10px;
+    }
+    #disposal.collapse{
+        max-width: 150px;
+        margin-left: 20px;
+    }
+}
+li{
+    padding-top: 5px;
+}
+ol{
+    padding-top: 5px;
+}
+
+/* Bubbles */
+#bubbles{
+    margin: auto;
+}
+#bubbles_row{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+#bubbles_exp{
+    border: 3px solid #0082aa;
+    border-radius: 10px;
+    padding: 20px;
+}
+#bubbles_text{
+    font-family: sans-serif;
+}

@@ -4561,7 +4561,7 @@ Created using IcoMoon - icomoon.io
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
   /* font-size: 0.7142em; */
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 0.5rem 0.7rem;
   line-height: 1.625rem;
 }
@@ -6012,8 +6012,9 @@ img {
 
 .page-header .page-header-image {
   position: absolute;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -6070,15 +6071,15 @@ img {
 }
 
 .clear-filter[filter-color="orange"] {
-  background: rgba(44, 44, 44, 0.2);
+  background: rgba(44, 44, 44, 0.3);
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.3), rgba(224, 23, 3, 0.7));
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.3), rgba(224, 23, 3, 0.7));
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.3), rgba(224, 23, 3, 0.7));
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  background: linear-gradient(0deg, rgba(44, 44, 44, 0.3), rgba(224, 23, 3, 0.7));
   /* Standard syntax */
 }
 
@@ -6235,7 +6236,7 @@ img {
   left: 40%;
 }
 
-.section-images {
+/* .section-images {
   max-height: 670px;
   height: 670px;
 }
@@ -6262,7 +6263,7 @@ img {
   position: absolute;
   top: 68%;
   right: 12%;
-}
+} */
 
 [data-background-color="orange"] {
   background-color: #e95e38;
@@ -6484,7 +6485,7 @@ img {
     display: block !important;
     top: 0;
     height: 100% !important;
-    width: 300px;
+    width: 320px!important;
     right: 0;
     z-index: 1032;
     visibility: visible;
@@ -6493,11 +6494,11 @@ img {
     border-top: none;
     text-align: left;
     max-height: none !important;
-    -webkit-transform: translate3d(300px, 0, 0);
-    -moz-transform: translate3d(300px, 0, 0);
-    -o-transform: translate3d(300px, 0, 0);
-    -ms-transform: translate3d(300px, 0, 0);
-    transform: translate3d(300px, 0, 0);
+    -webkit-transform: translate3d(320px, 0, 0);
+    -moz-transform: translate3d(320px, 0, 0);
+    -o-transform: translate3d(320px, 0, 0);
+    -ms-transform: translate3d(320px, 0, 0);
+    transform: translate3d(320px, 0, 0);
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -6507,13 +6508,13 @@ img {
   .sidebar-collapse .navbar-collapse:before {
     background: #f96332;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#f96332 0%, #000 80%);
+    /* background: -webkit-linear-gradient(#f96332 0%, #000 80%); */
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#f96332 0%, #000 80%);
+    /* background: -o-linear-gradient(#f96332 0%, #000 80%); */
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#f96332 0%, #000 80%);
+    /* background: -moz-linear-gradient(#f96332 0%, #000 80%); */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#f96332 0%, #000 80%);
+    /* background: linear-gradient(#f96332 0%, #000 80%); */
     /* Standard syntax (must be last) */
     opacity: 0.76;
     filter: alpha(opacity=76);
@@ -6675,11 +6676,11 @@ img {
   .sidebar-collapse.menu-on-left .navbar-collapse {
     right: auto;
     left: 0;
-    -webkit-transform: translate3d(-300px, 0, 0);
-    -moz-transform: translate3d(-300px, 0, 0);
-    -o-transform: translate3d(-300px, 0, 0);
-    -ms-transform: translate3d(-300px, 0, 0);
-    transform: translate3d(-300px, 0, 0);
+    -webkit-transform: translate3d(-320px, 0, 0);
+    -moz-transform: translate3d(-320px, 0, 0);
+    -o-transform: translate3d(-320px, 0, 0);
+    -ms-transform: translate3d(-320px, 0, 0);
+    transform: translate3d(-320px, 0, 0);
   }
   .nav-open .sidebar-collapse .navbar-collapse {
     -webkit-transform: translate3d(0px, 0, 0);
@@ -6689,18 +6690,18 @@ img {
     transform: translate3d(0px, 0, 0);
   }
   .nav-open .sidebar-collapse .wrapper {
-    -webkit-transform: translate3d(-150px, 0, 0);
-    -moz-transform: translate3d(-150px, 0, 0);
-    -o-transform: translate3d(-150px, 0, 0);
-    -ms-transform: translate3d(-150px, 0, 0);
-    transform: translate3d(-150px, 0, 0);
+    -webkit-transform: translate3d(-160px, 0, 0);
+    -moz-transform: translate3d(-160px, 0, 0);
+    -o-transform: translate3d(-160px, 0, 0);
+    -ms-transform: translate3d(-160px, 0, 0);
+    transform: translate3d(-160px, 0, 0);
   }
   .nav-open .sidebar-collapse .navbar-translate {
-    -webkit-transform: translate3d(-300px, 0, 0);
-    -moz-transform: translate3d(-300px, 0, 0);
-    -o-transform: translate3d(-300px, 0, 0);
-    -ms-transform: translate3d(-300px, 0, 0);
-    transform: translate3d(-300px, 0, 0);
+    -webkit-transform: translate3d(-320px, 0, 0);
+    -moz-transform: translate3d(-320px, 0, 0);
+    -o-transform: translate3d(-320px, 0, 0);
+    -ms-transform: translate3d(-320px, 0, 0);
+    transform: translate3d(-320px, 0, 0);
   }
   .nav-open .sidebar-collapse.menu-on-left .navbar-collapse {
     -webkit-transform: translate3d(0px, 0, 0);
@@ -6710,22 +6711,22 @@ img {
     transform: translate3d(0px, 0, 0);
   }
   .nav-open .sidebar-collapse.menu-on-left .navbar-translate {
-    -webkit-transform: translate3d(300px, 0, 0);
-    -moz-transform: translate3d(300px, 0, 0);
-    -o-transform: translate3d(300px, 0, 0);
-    -ms-transform: translate3d(300px, 0, 0);
-    transform: translate3d(300px, 0, 0);
+    -webkit-transform: translate3d(320px, 0, 0);
+    -moz-transform: translate3d(320px, 0, 0);
+    -o-transform: translate3d(320px, 0, 0);
+    -ms-transform: translate3d(320px, 0, 0);
+    transform: translate3d(320px, 0, 0);
   }
   .nav-open .sidebar-collapse.menu-on-left .wrapper {
-    -webkit-transform: translate3d(150px, 0, 0);
-    -moz-transform: translate3d(150px, 0, 0);
-    -o-transform: translate3d(150px, 0, 0);
-    -ms-transform: translate3d(150px, 0, 0);
-    transform: translate3d(150px, 0, 0);
+    -webkit-transform: translate3d(160px, 0, 0);
+    -moz-transform: translate3d(160px, 0, 0);
+    -o-transform: translate3d(160px, 0, 0);
+    -ms-transform: translate3d(160px, 0, 0);
+    transform: translate3d(160px, 0, 0);
   }
   .nav-open .sidebar-collapse.menu-on-left #bodyClick {
     right: auto;
-    left: 300px;
+    left: 320px;
   }
   .navbar-nav .nav-link i.fab,
   .navbar-nav .nav-link i.now-ui-icons {
@@ -6861,7 +6862,7 @@ img {
   .navbar-nav .nav-link i.now-ui-icons {
     opacity: .5;
   }
-  .section-images {
+  /* .section-images {
     height: 500px;
     max-height: 500px;
   }
@@ -6877,7 +6878,7 @@ img {
     right: 5%;
     max-width: 135px;
     top: 93%;
-  }
+  } */
 }
 
 @media screen and (min-width: 992px) {
@@ -6889,7 +6890,7 @@ img {
     display: block !important;
     top: 0;
     height: 100% !important;
-    width: 300px;
+    width: 320px;
     right: 0;
     z-index: 1032;
     visibility: visible;
@@ -6898,11 +6899,11 @@ img {
     border-top: none;
     text-align: left;
     max-height: none !important;
-    -webkit-transform: translate3d(300px, 0, 0);
-    -moz-transform: translate3d(300px, 0, 0);
-    -o-transform: translate3d(300px, 0, 0);
-    -ms-transform: translate3d(300px, 0, 0);
-    transform: translate3d(300px, 0, 0);
+    -webkit-transform: translate3d(320px, 0, 0);
+    -moz-transform: translate3d(320px, 0, 0);
+    -o-transform: translate3d(320px, 0, 0);
+    -ms-transform: translate3d(320px, 0, 0);
+    transform: translate3d(320px, 0, 0);
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -7237,7 +7238,7 @@ img {
   }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1200px) {
+/* @media screen and (min-width: 991px) and (max-width: 1200px) {
   .section-images .hero-images-container-1 {
     right: 9%;
     max-width: 370px;
@@ -7266,7 +7267,7 @@ img {
     max-width: 133px;
     top: 99%;
   }
-}
+} */
 
 @media screen and (max-width: 517px) {
   .alert .alert-icon {
@@ -7274,7 +7275,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .section-images .hero-images-container-1 {
     top: 51%;
     right: 21%;
@@ -7306,7 +7307,7 @@ img {
   .index-page .category-absolute {
     top: 90vh;
   }
-}
+} */
 
 @media screen and (max-width: 580px) {
   .alert button.close {
@@ -7324,3 +7325,9 @@ img {
 }
 
 /*# sourceMappingURL=kit-free.css.map */
+
+/* extras added */
+
+/* .collapse:not(.show) {
+  display: none;
+} */
