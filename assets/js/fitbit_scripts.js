@@ -156,7 +156,7 @@ function bubbles(){
     }
     // tooltip after move
     const mousemove = function(event, d) {
-      tooltip.html(d.feature+' : '+d.value+"%").style("left", (event.x/2+20) + "px").style("top",event.y/2 + "px")
+      tooltip.html(d.feature+' : '+d.value+"%").style("left", (event.x/4) + "px").style("top",event.y/10 + "px")
     }
     // tooltip after leave
     var mouseleave = function(event, d) {

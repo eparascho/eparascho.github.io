@@ -27,6 +27,7 @@ p{
 .hero-text {
     padding-top: 15%;
     color: white;
+    margin: auto;
 }
 @media screen and (min-width: 922px) and (max-width:1200px) {
     .hero-text {
@@ -40,12 +41,22 @@ p{
         transition: 0.5s;
     }
 }
+@media screen and (max-width:760px) {
+    h1{
+        font-size: 40px !important;
+    }
+}
+@media screen and (max-width:430px) {
+    h1{
+        font-size: 30px !important;
+    }
+    h2{
+        font-size: 26px !important;
+    }
+}
 .hero-text h1 {
     font-weight: 700;
     font-size: 4em;
-}
-.hero-text h2 {
-   color: black;
 }
 
 /************************** Popovers **************************/
@@ -434,4 +445,10 @@ ol{
     border: 3px solid #0082aa;
     border-radius: 10px;
     padding: 20px;
+}
+
+#copyright{
+    position: absolute;
+    right: 20px;
+    font-size: small;
 }
