@@ -59,6 +59,16 @@ p{
     font-size: 4em;
 }
 
+/************************** General content **************************/
+#general{
+    margin-bottom: 80px;
+    max-width: 80%;
+}
+#general_card{
+    border-radius: 10px;
+    padding: 10px;
+}
+
 /************************** Popovers **************************/
 .popover{
     max-width: 80%;
